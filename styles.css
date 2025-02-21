@@ -1,0 +1,317 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f0ff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(183, 148, 244, 0.2);
+  padding: 30px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #e6d0ff;
+  box-shadow: 0 4px 15px rgba(183, 148, 244, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.school-logo{
+  width: 150px;
+}
+
+.school-logo img {
+  width: 100%;
+  height: auto;
+}
+
+.profile-content {
+  padding: 20px;
+}
+
+h1 {
+  color: #7b2cbf;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(123, 44, 191, 0.1);
+}
+
+h2 {
+  color: #9d4edd;
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+h3 {
+  color: #7b2cbf;
+  margin: 25px 0 15px 0;
+  font-size: 1.3em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, #e6d0ff, transparent);
+}
+
+section {
+  margin: 30px 0;
+  padding: 20px;
+  background-color: #fdf8ff;
+  border-radius: 15px;
+  border: 1px solid #e6d0ff;
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(183, 148, 244, 0.15);
+}
+
+.about-me p {
+  color: #555;
+  line-height: 1.8;
+}
+
+.qualifications ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.qualifications li {
+  margin: 10px 0;
+  position: relative;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(183, 148, 244, 0.1);
+}
+
+.qualifications li:before {
+  content: "✨";
+  position: absolute;
+  left: -20px;
+}
+
+.interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.interest-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #e6d0ff;
+  transition: transform 0.3s ease;
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(183, 148, 244, 0.2);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(to right, #fdf8ff, white, #fdf8ff);
+  border-radius: 15px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #7b2cbf;
+  border: 1px solid #e6d0ff;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #7b2cbf;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(123, 44, 191, 0.2);
+}
+
+.quote {
+  font-style: italic;
+  color: #9d4edd;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  position: relative;
+}
+
+.quote::before,
+.quote::after {
+  content: '"';
+  font-size: 2em;
+  color: #e6d0ff;
+}
+
+@media (max-width: 960px) {
+  .profile-container {
+    width: 700px;
+    margin: 20px auto;
+  }
+
+  .profile-content {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .school-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 720px) {
+  .profile-container {
+    width: 500px;
+    padding: 20px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .school-logo {
+    width: 100px;
+  }
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .interests-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 540px) {
+  .profile-container {
+    width: 300px;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .profile-content {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  .interests-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 15px;
+    margin: 20px 0;
+  }
+
+  .qualifications li {
+    font-size: 0.9em;
+  }
+
+  .social-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .quote {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+}
